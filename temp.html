@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const registrationForm = document.getElementById("registrationForm");
+
+            registrationForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission for this example
+
+                const username = document.getElementById("username").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+
+                // Perform client-side validation here (e.g., password matching, email format)
+
+                // If validation passes, you can submit the form to the server
+                // For this example, let's assume the validation is always successful
+                alert("Registration successful!");
+            });
+        });
+    </script>
+</body>
+</html>

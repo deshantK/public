@@ -1,0 +1,102 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppings', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+
+header {
+    position:  fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99%;
+}
+
+.logo{
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.nevigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    margin-left: 40px;
+}
+
+.nevigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1s;
+}
+
+.nevigation a:hover:after{
+    transform: scaleX(1);
+}
+
+.nevigation .btnLogin-popup{
+    width: 100px;
+    height: 30px;
+    background:  transparent;
+    border: 2px, solid;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:  white;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: .5s;
+}
+
+.nevigation .btnLogin-popup:hover{
+    background:  white;
+    color: #162938;
+}
+
+.nevigation .btnRegister-popup{
+    width: 100px;
+    height: 30px;
+    background:  transparent;
+    border: 2px, solid;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:  white;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: .5s;
+}
+
+.nevigation .btnRegister-popup:hover{
+    background:  white;
+    color: #162938;
+}
